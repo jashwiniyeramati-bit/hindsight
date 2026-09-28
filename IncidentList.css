@@ -1,0 +1,176 @@
+.incident-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+  padding: 30px 36px;
+}
+
+.incident-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 28px;
+}
+
+.incident-page-header h1 {
+  font-size: 27px;
+  margin-top: 12px;
+}
+
+.incident-page-header p {
+  color: #7b8496;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.back-button {
+  border: 0;
+  background: transparent;
+  color: #4f46e5;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.new-incident-btn {
+  border: 0;
+  background: #4f46e5;
+  color: white;
+  padding: 11px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* Toolbar */
+
+.incident-toolbar {
+  background: white;
+  border: 1px solid #e5e8ef;
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.incident-toolbar input,
+.incident-toolbar select {
+  border: 1px solid #dfe3eb;
+  border-radius: 7px;
+  padding: 10px 12px;
+  font-size: 12px;
+  background: white;
+}
+
+.incident-toolbar input {
+  flex: 1;
+}
+
+/* Table */
+
+.incident-table {
+  background: white;
+  border: 1px solid #e5e8ef;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table-header,
+.table-row {
+  display: grid;
+  grid-template-columns:
+    100px
+    130px
+    80px
+    1fr
+    120px
+    100px
+    90px;
+  gap: 15px;
+  align-items: center;
+  padding: 17px 20px;
+}
+
+.table-header {
+  background: #f8f9fc;
+  color: #7b8496;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.table-row {
+  border-top: 1px solid #edf0f5;
+  font-size: 12px;
+}
+
+.table-row:hover {
+  background: #fafbff;
+}
+
+.error-text {
+  color: #667085;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.time-text {
+  color: #98a2b3;
+}
+
+.severity-badge,
+.status-badge {
+  display: inline-block;
+  border-radius: 20px;
+  padding: 5px 9px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.severity-badge.p1 {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.severity-badge.p2 {
+  background: #ffedd5;
+  color: #ea580c;
+}
+
+.severity-badge.p3 {
+  background: #fef3c7;
+  color: #ca8a04;
+}
+
+.status-badge.investigating {
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+.status-badge.monitoring {
+  background: #ecfdf5;
+  color: #15803d;
+}
+
+.status-badge.resolved {
+  background: #f0fdf4;
+  color: #16a34a;
+}
+
+@media (max-width: 900px) {
+  .incident-page {
+    padding: 20px;
+    overflow-x: auto;
+  }
+
+  .incident-table {
+    min-width: 850px;
+  }
+}
+.clickable-row {
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.clickable-row:hover {
+  background: #f5f7ff;
+}

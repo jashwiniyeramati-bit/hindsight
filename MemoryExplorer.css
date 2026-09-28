@@ -1,0 +1,542 @@
+.memory-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+  padding: 30px 36px 60px;
+}
+
+.memory-back {
+  border: 0;
+  background: transparent;
+  color: #4f46e5;
+  cursor: pointer;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.memory-back:hover {
+  text-decoration: underline;
+}
+
+.memory-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.memory-header h1 {
+  margin: 0;
+  color: #101828;
+  font-size: 28px;
+}
+
+.memory-header p {
+  color: #7b8496;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.memory-count {
+  background: white;
+  border: 1px solid #e5e8ef;
+  border-radius: 10px;
+  padding: 12px 18px;
+  text-align: right;
+}
+
+.memory-count strong {
+  display: block;
+  font-size: 22px;
+}
+
+.memory-count span {
+  color: #7b8496;
+  font-size: 10px;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.memory-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  border: 1px solid #e5e8ef;
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-bottom: 18px;
+}
+
+.memory-search input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  font-size: 12px;
+  color: #172033;
+}
+
+.memory-search button {
+  border: 0;
+  background: #4f46e5;
+  color: white;
+  border-radius: 7px;
+  padding: 9px 16px;
+  cursor: pointer;
+}
+
+.memory-search button:hover {
+  background: #4338ca;
+}
+
+
+/* =========================
+   STATS
+========================= */
+
+.memory-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.memory-stats > div {
+  background: white;
+  border: 1px solid #e5e8ef;
+  border-radius: 10px;
+  padding: 18px;
+}
+
+.memory-stats span {
+  display: block;
+  color: #7b8496;
+  font-size: 11px;
+}
+
+.memory-stats strong {
+  display: block;
+  font-size: 25px;
+  margin-top: 7px;
+}
+
+
+/* =========================
+   LIST
+========================= */
+
+.memory-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.memory-list-header h2 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.memory-list-header p {
+  color: #7b8496;
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+.memory-list-header select {
+  border: 1px solid #dfe3eb;
+  background: white;
+  padding: 8px;
+  border-radius: 7px;
+  font-size: 11px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.explorer-card {
+  position: relative;
+  background: white;
+  border: 1px solid #e5e8ef;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 12px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.explorer-card:hover {
+  transform: translateY(-2px);
+  border-color: #c7d2fe;
+  box-shadow: 0 5px 15px rgba(16, 24, 40, 0.06);
+}
+
+.explorer-card.new-memory {
+  border-color: #a5b4fc;
+  background: #fafaff;
+}
+
+.new-memory-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 5px 9px;
+  border-radius: 6px;
+  background: #eef2ff;
+  color: #4f46e5;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.explorer-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.memory-id {
+  color: #6366f1;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.explorer-card h3 {
+  color: #172033;
+  font-size: 14px;
+  margin: 5px 0 0;
+}
+
+.match {
+  flex-shrink: 0;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.high-match {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.medium-match {
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+.low-match {
+  background: #fef3c7;
+  color: #a16207;
+}
+
+
+/* =========================
+   DETAILS
+========================= */
+
+.memory-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid #edf0f5;
+}
+
+.memory-details span {
+  display: block;
+  color: #98a2b3;
+  font-size: 9px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.memory-details strong {
+  color: #172033;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.success-text {
+  color: #16a34a !important;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.memory-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-top: 18px;
+}
+
+.memory-footer span {
+  color: #98a2b3;
+  font-size: 10px;
+}
+
+.memory-footer button {
+  border: 0;
+  background: transparent;
+  color: #4f46e5;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.memory-footer button:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.memory-empty {
+  background: white;
+  border: 1px solid #e5e8ef;
+  border-radius: 12px;
+  padding: 50px 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.memory-empty div {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.memory-empty h3 {
+  margin: 0;
+  color: #172033;
+}
+
+.memory-empty p {
+  color: #7b8496;
+  font-size: 12px;
+}
+
+
+/* =========================
+   MEMORY DETAIL PANEL
+========================= */
+
+.memory-detail-panel {
+  background: white;
+  border: 1px solid #c7d2fe;
+  border-radius: 12px;
+  padding: 22px;
+  margin: 20px 0;
+  box-shadow: 0 6px 20px rgba(16, 24, 40, 0.07);
+}
+
+.detail-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #edf0f5;
+  padding-bottom: 15px;
+}
+
+.detail-panel-header span {
+  color: #6366f1;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.detail-panel-header h2 {
+  margin: 5px 0 0;
+  font-size: 20px;
+}
+
+.detail-panel-header button {
+  border: 0;
+  background: #f2f4f7;
+  border-radius: 7px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.detail-panel-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.detail-panel-grid span,
+.memory-note span {
+  display: block;
+  color: #98a2b3;
+  font-size: 9px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.detail-panel-grid strong {
+  color: #172033;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.memory-note {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 9px;
+  background: #f8f9fc;
+}
+
+.memory-note p {
+  margin: 0;
+  color: #475467;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   LEARNING LOOP
+========================= */
+
+.learning-loop {
+  background: #101827;
+  color: white;
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 25px;
+}
+
+.learning-loop h2 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.learning-loop p {
+  color: #9da8bb;
+  font-size: 11px;
+  margin-top: 5px;
+}
+
+.loop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.loop-step {
+  text-align: center;
+  min-width: 130px;
+}
+
+.loop-step span {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border-radius: 50%;
+  background: #6366f1;
+  font-size: 11px;
+}
+
+.loop-step strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+.loop-step small {
+  display: block;
+  color: #8f9bb3;
+  font-size: 9px;
+  margin-top: 3px;
+}
+
+.loop-arrow {
+  color: #6366f1;
+  font-size: 20px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .memory-page {
+    padding: 20px;
+  }
+
+  .memory-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .memory-details {
+    grid-template-columns: 1fr;
+  }
+
+  .loop {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .memory-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .memory-header {
+    display: block;
+  }
+
+  .memory-count {
+    display: inline-block;
+    margin-top: 15px;
+  }
+
+  .memory-list-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .explorer-card-top {
+    flex-direction: column;
+  }
+
+  .memory-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .detail-panel-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .loop {
+    flex-direction: column;
+  }
+
+  .loop-arrow {
+    transform: rotate(90deg);
+  }
+
+}
